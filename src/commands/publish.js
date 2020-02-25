@@ -13,7 +13,7 @@ class PublishCommand extends Command {
     const THREAD_ADDRESS = "/orbitdb/zdpuAtwYnE2tLJbahCdJbdfHZesrzz1E332kc5q8MPyRQFHks/3box.thread.demo-app-space-name-123asddsa321.apps_list";
     const SEED = '0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d' // a hex encoded seed
 
-    const idWallet = new IdentityWallet(this.getConsent, { SEED });
+    const idWallet = new IdentityWallet(this.getConsent, { seed: SEED });
     const provider = idWallet.get3idProvider()
     const box = await Box.openBox(null, provider)
 
